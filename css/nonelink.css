@@ -1,0 +1,7 @@
+.p:link,
+.p:visited,
+.p:hover,
+.p:active {
+    color: #fff;
+    text-decoration: none;
+}

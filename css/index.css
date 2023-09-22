@@ -1,0 +1,42 @@
+
+ind {
+    font-size: 16px;
+    font-weight: lighter;
+    font-weight: normal;
+    color: #777777;
+}
+
+a {
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #dddddd;
+}
+
+h1>a {
+    font-size: 35px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.nl { display: none; }
+
+/* phone */
+
+@media screen and (max-width: 478px) {
+    html { text-align: center; }
+
+    ind {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .nl { display: inline-block; }
+
+    h3>a {
+        display: flex;
+        justify-content: center;
+    }
+
+    #help { display: block; }
+}

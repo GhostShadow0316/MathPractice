@@ -1,0 +1,112 @@
+@import url(font.css);
+
+h1 { margin-left: 20px; }
+
+html {
+    background: #000;
+    font-family: "jf";
+}
+
+h1, h2, h3, h4, h5, h6, p, label, ol, li, help {
+    color: #fff;
+}
+
+#equation {
+    font-size: 24px;
+    padding-left: 16px;
+    color: #fff;
+    transition-duration: 0.2s;
+}
+
+#equation:hover {
+    color: #8f8f8f;
+}
+
+#equation:active {
+    color: #00ff00;
+}
+
+input {
+    font-family: "Fira Code";
+    font-size: 32px;
+    width: 340px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+#status {
+    font-size: 24px;
+}
+
+button {
+    font-size: 30px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition-duration: 0.2s;
+    white-space: normal;
+}
+
+button:hover {
+    background-color: #5c5c5c;
+    color: white;
+}
+
+#submit {
+    margin-left: 10px;
+}
+
+#help_a {
+    font-size: 20px;
+    color: #808080;
+    user-select: none;
+    cursor: pointer;
+}
+
+#help_a:hover { color: #aaaaaa; }
+
+iframe {
+    border: none;
+    display: none;
+}
+
+/* phone */
+
+@media screen and (max-width: 478px) {
+    html {
+        text-align: center;
+    }
+
+    h1 { margin-left: 0px; }
+
+    #submit { margin: auto; }
+    #help {
+        display: block;
+        margin: auto;
+    }
+
+    input {
+        width: 85%;
+    }
+
+    #home {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* #submit {
+        display: block;
+        margin: auto;
+    } */
+}
