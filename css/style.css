@@ -10,7 +10,7 @@ html {
 
 tutor {
     font-family: "Fira Code";
-    font-size: 75px;
+    font-size: 80px;
     transition-duration: 0.5s;
     position: absolute;
     top: 50%;
@@ -114,5 +114,7 @@ iframe {
         background-color: #fff;
         color: #000;
     }
+
+    tutor { font-size: 20px; }
 
 }

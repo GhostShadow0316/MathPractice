@@ -16,5 +16,7 @@ animation = async function(elem, text) {
 }
 
 zoom = async function(elem) {
-    elem.style["font-size"] = "150px";
+    size = (window.getComputedStyle(elem, null).getPropertyValue('font-size').replace("px", "") * 2) + "px";
+    // console.log(size);
+    elem.style.fontSize = size;
 }
