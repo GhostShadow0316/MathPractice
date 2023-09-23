@@ -3,12 +3,20 @@
 h1 { margin-left: 20px; }
 
 html {
+    color: #fff;
     background: #000;
     font-family: "jf";
 }
 
-h1, h2, h3, h4, h5, h6, p, label, ol, li, help {
-    color: #fff;
+tutor {
+    font-family: "Fira Code";
+    font-size: 75px;
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 #equation {
@@ -62,11 +70,13 @@ button:hover {
     margin-left: 10px;
 }
 
-#help_a {
+#help_a,
+.help_a {
     font-size: 20px;
     color: #808080;
     user-select: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #help_a:hover { color: #aaaaaa; }
@@ -105,8 +115,4 @@ iframe {
         color: #000;
     }
 
-    /* #submit {
-        display: block;
-        margin: auto;
-    } */
 }

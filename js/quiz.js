@@ -1,5 +1,4 @@
 // Functions
-var x;
 
 setStatus = (text= "&nbsp;", color= "#fff", ms= 1000) => {
     status_p.style["color"] = color;
@@ -12,11 +11,13 @@ newQuiz = () => {
     var eq  = res[0];
     var val = res[1];
     x = res[2];
+    var abc = res[3];
     console.log(x);
 
     equation_p.innerHTML = eq;
     equation_p.value = val;
     ans_inp.value = "";
+    if (abc!=null) { tutor_a.href = `tutorial/LE1V.html?a=${abc[0]}&b=${abc[1]}&c=${abc[2]}`; }
 
     correct_p.innerHTML = `Correct: ${correct}`;
     wrong_p  .innerHTML = `Wrong: ${wrong}`;
@@ -58,14 +59,16 @@ var equation_tt = document.getElementById("copy");
 var ans_inp     = document.getElementById("ans");
 var btn_submit  = document.getElementById("submit");
 var status_p    = document.getElementById("status");
+var tutor_a     = document.getElementById("tutor");
 var correct_p   = document.getElementById("correct");
 var wrong_p     = document.getElementById("wrong");
 var total_p     = document.getElementById("total");
 
-
 var correct = 0;
 var wrong   = 0;
 var total   = 0;
+
+var x;
 
 // Event
 

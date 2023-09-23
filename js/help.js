@@ -10,17 +10,13 @@ var type = (params.get("type")).toLowerCase();
 
 switch (type) {
     case "le1v":
-        console.log("LE1V");
         break;
     case "le2v":
-        console.log("LE2V");
         format_div.style["display"] = "block";
         break;
     case "qe":
-        console.log("QE");
         break;
     case "sqr":
-        console.log("Square Root");
         break;
 }
 

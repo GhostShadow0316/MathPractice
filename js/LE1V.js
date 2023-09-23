@@ -9,7 +9,7 @@ quiz = () => {
 
     eq = `${a}x ${num(b)} = ${c}`;
 
-    return [eq, eq, x];
+    return [eq, eq, x, [a, b, c]];
 }
 
 get_ans = () => {

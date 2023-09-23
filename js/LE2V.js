@@ -23,7 +23,7 @@ quiz = () => {
 
     if (x==y) { return [eqs, eqs, ["*", x]]; }
 
-    return [eqs, val, [x, y]];
+    return [eqs, val, [x, y], null];
 }
 
 get_ans = () => {

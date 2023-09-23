@@ -7,7 +7,7 @@ quiz = () => {
     val= `√${a}`
     eq = `<math><msqrt><mrow><mi>${a}</mi></mrow></msqrt></math>`;
 
-    return [eq, val, x];
+    return [eq, val, x, null];
 }
 
 get_ans = () => {

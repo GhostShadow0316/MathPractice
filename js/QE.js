@@ -9,7 +9,7 @@ quiz = () => {
     eq = `x² ${num(sum(nums))}x ${num(prod(nums))} = 0`;
     if (nums[0]==nums[1]) {roots = ["*", -nums[0]]; }
     else { roots = [-nums[0], -nums[1]]; }
-    return [eq, eq, roots.sort()];
+    return [eq, eq, roots.sort(), null];
 }
 
 get_ans = () => {
