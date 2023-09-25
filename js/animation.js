@@ -1,22 +1,34 @@
 
-const delay = (ms=2500) => new Promise(res => setTimeout(res, ms));
+close_btn = document.getElementById("close");
+close_btn.addEventListener("click", () => { close(); })
 
-animation = async function(elem, text) {
-    setTimeout(()=>{
+
+const delay = (ms=600+900+900+900+900) => new Promise(res => setTimeout(res, ms));
+
+animation = async function(elem, text, text2="") {
+    // duration: 600+1000+1000+1000+1000 = 4600
+    setTimeout(() => {
         elem.classList.add("up");
-        setTimeout(()=> {
-            elem.innerHTML = text.replaceAll(" ", "&nbsp;");
-            setTimeout(()=>{
-                elem.classList.remove("up");
-                elem.classList.add("down");
-                setTimeout(()=> { elem.classList.remove("down"); }, 1000)
-            }, 500)
-        }, 1000)
-    }, 600)
+        setTimeout(() => {
+            elem.innerHTML = text.replaceAll(" ", "&nbsp;").replaceAll("--",  "+");
+            setTimeout(() => {
+                elem.innerHTML = text2.replaceAll(" ", "&nbsp;");
+                setTimeout(() => {
+                    elem.classList.remove("up");
+                    elem.classList.add("down");
+                    setTimeout(() => { elem.classList.remove("down"); }, 900) // down
+                }, 900) // bc down
+            }, 900) // c-b => bc
+        }, 900) // b = c => c-b
+    }, 600) // go up
 }
 
-zoom = async function(elem) {
-    size = (window.getComputedStyle(elem, null).getPropertyValue('font-size').replace("px", "") * 2) + "px";
-    // console.log(size);
+zoom_in = async function(elem) {
+    size = style(elem, "font-size").replace("px", "") * 2 + "px";
+    elem.style.fontSize = size;
+}
+
+zoom_out = async function(elem) {
+    size = style(elem, "font-size").replace("px", "") / 2.0 + "px";
     elem.style.fontSize = size;
 }

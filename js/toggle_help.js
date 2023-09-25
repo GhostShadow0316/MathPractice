@@ -8,8 +8,8 @@ iframe.width  = "100%";
 
 
 toggle_iframe = () => {
-    if (iframe.style["display"]=="") { iframe.style["display"] = "block" }
-    else { iframe.style["display"] = "" }
+    if (style(iframe, "display")=="none") { iframe.style["display"] = "block" }
+    else { iframe.style["display"] = "none" }
     iframe.scrollIntoView();
 }
 

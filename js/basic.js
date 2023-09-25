@@ -31,3 +31,7 @@ num = (n, pos= 0, space= 1) => {
         }
     }
 }
+
+style = function(elem, style) {
+    return (window.getComputedStyle(elem, null).getPropertyValue(style));
+}

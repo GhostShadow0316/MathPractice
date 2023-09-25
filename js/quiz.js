@@ -7,6 +7,7 @@ setStatus = (text= "&nbsp;", color= "#fff", ms= 1000) => {
 };
 
 newQuiz = () => {
+    ans_inp.focus();
     res = quiz();
     var eq  = res[0];
     var val = res[1];
