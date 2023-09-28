@@ -1,3 +1,4 @@
+@import url(font.css);
 
 @keyframes up {
     0%   {
@@ -6,14 +7,16 @@
     }
     100%  {
         position: relative;
-        top: -40px;
+        /* top: -40px; */
+        top: -4vw;
     }
 }
 
 @keyframes down {
     0%  {
         position: relative;
-        top: -40px;
+        /* top: -40px; */
+        top: -4vw;
     }
     100% {
         position: relative;
@@ -25,6 +28,19 @@
 .down { animation: down 0.4s ease 0s 1 normal forwards; }
 
 button { position: absolute; }
+
+tutor {
+    font-family: "Fira Code";
+    width: 100vw;
+    font-size: 6vw;
+    text-align: center;
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 #close {
     top:  0%;
@@ -38,6 +54,8 @@ button { position: absolute; }
     right:  0%;
     margin-bottom: 30px;
     margin-right:  30px;
+    color: white;
+    background-color: #5c5c5c;
 }
 
 #again:disabled,

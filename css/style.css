@@ -8,17 +8,6 @@ html {
     font-family: "jf";
 }
 
-tutor {
-    font-family: "Fira Code";
-    font-size: 80px;
-    transition-duration: 0.5s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 #equation {
     font-size: 24px;
     padding-left: 16px;
