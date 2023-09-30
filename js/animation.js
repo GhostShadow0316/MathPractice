@@ -11,7 +11,7 @@ var fillMode = "forwards"
 
 const delay = (ms=600+900+900+900+900) => new Promise(res => setTimeout(res, ms));
 
-animation = async function(elem, text, text2="") {
+up_down = async function(elem, text, text2="") {
     // duration: 600+900+900+900+900 = 4200
     await delay(600);
     elem.style["animation"] = `up ${duration}s ${tFunc} ${delay_}s ${count} ${direction} ${fillMode}`;
@@ -34,3 +34,9 @@ zoom_out = async function(elem) {
     size = style(elem, "font-size").replace("px", "") / 2.0 + "px";
     elem.style.fontSize = size;
 }
+
+highlight = async function(elem, color="#fff") {
+    elem.style["color"] = color;
+}
+
+

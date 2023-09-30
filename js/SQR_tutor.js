@@ -9,30 +9,39 @@ num = (n) => {
 let URLObject = new URL(window.location.href);
 let params = new URLSearchParams(URLObject.search);
 let url = (window.location.href).split("?")[0];
-var qe  = (params.get("qe").split(""));
-var n   = (params.get("n"));
+var qe  = ((params.get("qe") || "2916").split(""));
+var n   = (params.get("n") || "54");
 var qe2 = ([qe.pop(), qe.pop()].reverse().toString().replace(",", ""));
 var qe1 = (qe.toString().replace(",", ""));
 
-again = document.getElementById("again");
+var again = document.getElementById("again");
 
-tutor = document.getElementsByTagName("tutor")[0];
-tutor.innerHTML = `<label id="qe1">72</label><label id="qe2">25</label>`
+var tutor = document.getElementsByTagName("tutor")[0];
+// tutor.innerHTML = `<label id="qe1">29</label><label id="qe2">16</label>`
 
-qe1_l = document.getElementById("qe1");
-qe2_l = document.getElementById("qe2");
+var qe1_l  = document.getElementById("qe1");
+var qe2_l  = document.getElementById("qe2");
+var squares = [
+    document.getElementById("n0"),
+    document.getElementById("n1"),
+    document.getElementById("n2"),
+    document.getElementById("n3"),
+    document.getElementById("n4"),
+    document.getElementById("n5"),
+    document.getElementById("n6"),
+    document.getElementById("n7"),
+    document.getElementById("n8"),
+    document.getElementById("n9")
+]
 
 main = async () => {
-    animation(qe1_l, `${n[0]}²`, `${n[0]*n[0]}`);
-    await delay();
-    animation(qe1_l, `${qe1}`, `${qe1}`);
-    // await delay();
-    // animation(x, "");
-    // animation(qe2_l, `${bc}/${a}`, `${bc/a}`);
-    // await delay(5000);
-    // zoom_in(tutor);
-    // await delay(500);
-    // again.toggleAttribute("disabled");
+    await delay(600);
+    highlight(qe1_l, "red");
+    await delay(600);
+    highlight(squares[Number(n[0])], "red");
+    await delay(900);
+    highlight(qe1_l);
+    highlight(squares[Number(n[0])]);
 }
 
 // again.addEventListener("click", async () => {

@@ -42,6 +42,30 @@ tutor {
     transform: translate(-50%, -50%);
 }
 
+#squares {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+table, td, tr {
+    border-collapse: collapse;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+td {
+    height: 40px;
+    width: 40px;
+    transition-duration: 0.5s;
+}
+
+/* label {
+    transition-duration: 0.5s;
+} */
+
 #close {
     top:  0%;
     left: 0%;

@@ -14,21 +14,21 @@ var b  = (params.get("b") || "3");
 var c  = (params.get("c") || "7");
 var bc = (c-b);
 
-again = document.getElementById("again");
+var again = document.getElementById("again");
 
-tutor = document.getElementsByTagName("tutor")[0];
+var tutor = document.getElementsByTagName("tutor")[0];
 tutor.innerHTML = `<label id="x">${a}</label>x <label id="n1">${num(b)}</label> = <label id="n2">${c}</label>`
 
-x  = document.getElementById("x");
-n1 = document.getElementById("n1");
-n2 = document.getElementById("n2");
+var x  = document.getElementById("x");
+var n1 = document.getElementById("n1");
+var n2 = document.getElementById("n2");
 
 main = async () => {
-    animation(n1, "");
-    animation(n2, `${c} - ${b}`, `${bc}`);
+    up_down(n1, "");
+    up_down(n2, `${c} - ${b}`, `${bc}`);
     await delay();
-    animation(x, "");
-    animation(n2, `${bc} / ${a}`, `${bc/a}`);
+    up_down(x, "");
+    up_down(n2, `${bc} / ${a}`, `${bc/a}`);
     await delay();
     zoom_in(tutor);
     await delay(500);
